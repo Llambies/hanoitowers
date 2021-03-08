@@ -14,5 +14,14 @@ namespace Torres_de_Hanoi
         public String Valor { get; set; }
         */
 
+        private int valor;
+        //constructor
+        public void disco(int i)
+        {
+            this.valor = i;
+        }
+
+        
+
     }
 }
