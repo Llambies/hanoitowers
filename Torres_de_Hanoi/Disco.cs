@@ -14,7 +14,9 @@ namespace Torres_de_Hanoi
         public String Valor { get; set; }
         */
 
-        private int valor;
+        private int valor { get; set; }
+
+
         //constructor
         public void disco(int i)
         {
