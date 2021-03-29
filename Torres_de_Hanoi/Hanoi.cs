@@ -142,19 +142,42 @@ namespace Torres_de_Hanoi
             return false;
         }
 
-
+        int movimientos = 0; 
         public int recursivo(int n, Pila ini, Pila fin, Pila aux)
         {
-            int movimientos = 0; 
+            
 
             if (n == 1){
-                mover_disco(ini,fin);
-                movimientos++;
+
+                if (ini.Top!=0 && (fin.Top > ini.Top || fin.Top == 0))
+                    {
+                        mover_disco(ini,fin);
+                        Console.WriteLine("Mover disco " + ini.Top + " de la pila INI a la FIN"); 
+                        movimientos++;
+                    }
+                else if(fin.Top!=0 && (fin.Top < ini.Top || ini.Top ==0))
+                    {
+                        mover_disco(fin,ini);
+                        Console.WriteLine("Mover disco " + fin.Top + " de la pila FIN a la INI"); 
+                        movimientos++;
+                    }
             }
             else{
-                recursivo(n-1,ini,fin,aux);
-                mover_disco(ini,fin);
-                movimientos++;
+                recursivo(n-1,ini,aux,fin);
+
+                if (ini.Top!=0 && (fin.Top > ini.Top || fin.Top == 0))
+                    {
+                        mover_disco(ini,fin);
+                        Console.WriteLine("Mover disco " + ini.Top + " de la pila INI a la FIN"); 
+                        movimientos++;
+                    }
+                else if(fin.Top!=0 && (fin.Top < ini.Top || ini.Top ==0))
+                    {
+                        mover_disco(fin,ini);
+                        Console.WriteLine("Mover disco " + fin.Top + " de la pila FIN a la INI"); 
+                        movimientos++;
+                    }
+                
                 recursivo(n-1,aux,fin,ini);
             }
             return movimientos;
