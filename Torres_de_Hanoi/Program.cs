@@ -11,9 +11,9 @@ namespace Torres_de_Hanoi
         static void Main(string[] args)
         {
             int n;
-            Pila ini = new Pila();
-            Pila aux = new Pila();
-            Pila fin = new Pila();
+            Pila ini = new Pila("ini");
+            Pila aux = new Pila("fin");
+            Pila fin = new Pila("aux");
 
            
 
@@ -26,14 +26,21 @@ namespace Torres_de_Hanoi
                 for(int i = n; i>0;i--)
                 {
                     Disco d = new Disco();
-                    Console.WriteLine(i);
                     d.valor = i;
                     ini.push(d);
                   
                 }
                 Hanoi h = new Hanoi();
-                int moves = h.iterativo(n,ini,aux,fin);
-                Console.WriteLine("Total : " + moves);
+                int movesI = h.iterativo(n,ini,aux,fin);
+                Console.BackgroundColor = ConsoleColor.Red;
+                Console.WriteLine("Total en Iterativo : " + movesI);
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ReadLine();
+                int movesR = h.recursivo(n,ini,aux,fin);
+                Console.BackgroundColor = ConsoleColor.Blue;
+                Console.WriteLine("Total en Recursivo : " + movesR);
+                Console.BackgroundColor = ConsoleColor.Black;
+                
                 Console.ReadLine();
             }
             else

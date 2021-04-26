@@ -16,6 +16,7 @@ namespace Torres_de_Hanoi
         */
         public int Top { get; set; }
 
+        public String Name { get; set; }
      
         /* TODO: Elegir tipo de Elementos
         public Disco[] Elementos { get; set; }
@@ -25,8 +26,9 @@ namespace Torres_de_Hanoi
 
 
         /* TODO: Implementar métodos */
-        public Pila()
+        public Pila(String n)
         {
+            this.Name=n;
             this.Discos = new List<Disco>();
             this.Size = 0;
         }

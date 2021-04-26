@@ -26,13 +26,13 @@ namespace Torres_de_Hanoi
                     if (ini.Top!=0 && (fin.Top > ini.Top || fin.Top == 0))
                         {
                          mover_disco(ini,fin);
-                         Console.WriteLine("Mover disco " + ini.Top + " de la pila INI a la FIN"); 
+                         Console.WriteLine("Mover disco " + ini.Top + " de la pila "+ ini.Name +" a la " + fin.Name); 
                          movimientos++;
                         }
                     else if(fin.Top!=0 && (fin.Top < ini.Top || ini.Top ==0))
                         {
                             mover_disco(fin,ini);
-                            Console.WriteLine("Mover disco " + fin.Top + " de la pila FIN a la INI"); 
+                            Console.WriteLine("Mover disco " + fin.Top + " de la pila " + fin.Name + " a la "+ ini.Name ); 
                             movimientos++;
                         }
                     
@@ -43,13 +43,13 @@ namespace Torres_de_Hanoi
                         if (ini.Top!=0 && (aux.Top > ini.Top || aux.Top == 0))
                         {
                             mover_disco(ini,aux);
-                            Console.WriteLine("Mover disco " + ini.Top + " de la pila INI a la AUX"); 
+                            Console.WriteLine("Mover disco " + ini.Top + " de la pila "+ ini.Name +" a la " + aux.Name); 
                             movimientos++;
                 
                         }else if(aux.Top!=0 && (aux.Top < ini.Top || ini.Top ==0))
                         {
                             mover_disco(aux,ini);
-                            Console.WriteLine("Mover disco " + aux.Top + " de la pila AUX a la INI"); 
+                            Console.WriteLine("Mover disco " + aux.Top + " de la pila " + aux.Name + " a la "+ ini.Name); 
                             movimientos++;
                         }
                         
@@ -61,13 +61,13 @@ namespace Torres_de_Hanoi
                         if (ini.Top!=0 && (fin.Top > aux.Top || fin.Top == 0))
                         {
                             mover_disco(aux,fin);
-                            Console.WriteLine("Mover disco " + aux.Top + " de la pila AUX a la FIN"); 
+                            Console.WriteLine("Mover disco " + aux.Top + " de la pila " + aux.Name + " a la " + fin.Name); 
                             movimientos++;
                 
                         }else if(aux.Top!=0 && (fin.Top < aux.Top || aux.Top ==0))
                         {
                             mover_disco(fin,aux);
-                            Console.WriteLine("Mover disco " + aux.Top + " de la pila FIN a la AUX"); 
+                            Console.WriteLine("Mover disco " + aux.Top + " de la pila " + fin.Name + " a la " + aux.Name); 
                             movimientos++;
                         }
                         
@@ -81,13 +81,13 @@ namespace Torres_de_Hanoi
                     if (ini.Top!=0 && (aux.Top > ini.Top || aux.Top == 0))
                         {
                             mover_disco(ini,aux);
-                            Console.WriteLine("Mover disco " + ini.Top + " de la pila INI a la AUX");
+                            Console.WriteLine("Mover disco " + ini.Top + " de la pila "+ ini.Name +" a la " + aux.Name);
                             movimientos++;
                         }
                     else if(aux.Top!=0 && (aux.Top < ini.Top || ini.Top ==0))
                         {
                             mover_disco(aux,ini);
-                            Console.WriteLine("Mover disco " + aux.Top + " de la pila AUX a la INI");
+                            Console.WriteLine("Mover disco " + aux.Top + " de la pila " + aux.Name + " a la "+ ini.Name);
                             movimientos++;
                         }
 
@@ -97,13 +97,13 @@ namespace Torres_de_Hanoi
                            if (ini.Top!=0 && (fin.Top > ini.Top || fin.Top == 0))
                             {
                              mover_disco(ini,fin);
-                             Console.WriteLine("Mover disco " + ini.Top + " de la pila INI a la FIN"); 
+                             Console.WriteLine("Mover disco " + ini.Top + " de la pila "+ ini.Name +" a la " + fin.Name); 
                              movimientos++;
                             }
                         else if(fin.Top!=0 && (fin.Top < ini.Top || ini.Top ==0))
                             {
                                 mover_disco(fin,ini);
-                                Console.WriteLine("Mover disco " + fin.Top + " de la pila FIN a la INI"); 
+                                Console.WriteLine("Mover disco " + fin.Top + " de la pila " + fin.Name + " a la "+ ini.Name); 
                                 movimientos++;
                             }
                         
@@ -115,13 +115,13 @@ namespace Torres_de_Hanoi
                         if (fin.Top!=0 && (fin.Top > aux.Top || fin.Top == 0))
                         {
                             mover_disco(aux,fin);
-                            Console.WriteLine("Mover disco " + aux.Top + " de la pila AUX a la FIN"); 
+                            Console.WriteLine("Mover disco " + aux.Top + " de la pila " + aux.Name + " a la " + fin.Name); 
                             movimientos++;
                 
                         }else if(aux.Top!=0 && (fin.Top < aux.Top || aux.Top ==0))
                         {
                             mover_disco(fin,aux);
-                            Console.WriteLine("Mover disco " + aux.Top + " de la pila FIN a la AUX"); 
+                            Console.WriteLine("Mover disco " + aux.Top + " de la pila " + fin.Name + " a la " + aux.Name); 
                             movimientos++;
                         }
                     }
@@ -152,13 +152,13 @@ namespace Torres_de_Hanoi
                 if (ini.Top!=0 && (fin.Top > ini.Top || fin.Top == 0))
                     {
                         mover_disco(ini,fin);
-                        Console.WriteLine("Mover disco " + ini.Top + " de la pila INI a la FIN"); 
+                        Console.WriteLine("Mover disco " + ini.Top + " de la pila "+ ini.Name +" a la " + fin.Name); 
                         movimientos++;
                     }
                 else if(fin.Top!=0 && (fin.Top < ini.Top || ini.Top ==0))
                     {
                         mover_disco(fin,ini);
-                        Console.WriteLine("Mover disco " + fin.Top + " de la pila FIN a la INI"); 
+                        Console.WriteLine("Mover disco " + fin.Top + " de la pila " + fin.Name + " a la "+ ini.Name); 
                         movimientos++;
                     }
             }
@@ -168,13 +168,13 @@ namespace Torres_de_Hanoi
                 if (ini.Top!=0 && (fin.Top > ini.Top || fin.Top == 0))
                     {
                         mover_disco(ini,fin);
-                        Console.WriteLine("Mover disco " + ini.Top + " de la pila INI a la FIN"); 
+                        Console.WriteLine("Mover disco " + ini.Top + " de la pila "+ ini.Name +" a la " + fin.Name); 
                         movimientos++;
                     }
                 else if(fin.Top!=0 && (fin.Top < ini.Top || ini.Top ==0))
                     {
                         mover_disco(fin,ini);
-                        Console.WriteLine("Mover disco " + fin.Top + " de la pila FIN a la INI"); 
+                        Console.WriteLine("Mover disco " + fin.Top + " de la pila " + fin.Name + " a la "+ ini.Name); 
                         movimientos++;
                     }
                 
